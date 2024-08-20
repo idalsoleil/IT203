@@ -1,22 +1,22 @@
 # Object-Oriented Programming
 
-COLLEGE : College of Information and Communications Technology
+**COLLEGE** : College of Information and Communications Technology
 
-DEPARTMENT : Bachelor of Science in Information Technology
+**DEPARTMENT** : Bachelor of Science in Information Technology
 
-TRACK : N/A
+**TRACK** : N/A
 
-COURSE CODE : IT 203
+**COURSE CODE** : IT 203
 
-COURSE TITLE : Object Oriented Programming
+**COURSE TITLE** : Object Oriented Programming
 
-CREDIT UNITS : 2 Units Lecture | 1 Unit Laboratory
+**CREDIT UNITS** : 2 Units **Lecture** | 1 Unit **Laboratory**
 
-PRE-REQUISITE : CC 104
+**PRE-REQUISITE** : CC 104
 
-FACULTY : Jennylyn L. Aniag
+**FACULTY** : Jennylyn L. Aniag
 
-CONSULTATION HOURS : 3 Hours / Week
+**CONSULTATION HOURS** : 3 Hours / Week
 
 ## COURSE DESCRIPTION:
 This course is designed to develop the students’ knowledge and skills in developing various
