@@ -23,7 +23,7 @@ public class AtienzaLab {
         Scanner sc = new Scanner(System.in);
         
         for (int i = 0; i < 2 ; i++) {
-            System.out.println("Enter a char: ");
+            System.out.println("Enter a character: ");
             chr[i] = sc.next().charAt(0);
         }
     }
