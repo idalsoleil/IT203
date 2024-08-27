@@ -10,11 +10,6 @@ import java.util.Scanner;
  * @author huawei
  */
 public class AtienzaBonus {
-    public static void getName(String[] name) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your name: ");
-        name[0] = sc.nextLine();
-    }
     
     public static void getSubCode(String[] subcode) {
         Scanner sc = new Scanner(System.in);
@@ -35,7 +30,7 @@ public class AtienzaBonus {
     }
     
     public static void main(String[] args) {
-        String[] name = new String[1];
+        Scanner sc = new Scanner(System.in);
         String[] subcode = new String[5];
         int[] grades = new int[5];
         int highestGrade = 0;
@@ -44,9 +39,11 @@ public class AtienzaBonus {
         int lowestIndex = 0;
         int sum = 0;
         
-        getName(name);
         getSubCode(subcode);
         getGrades(grades);
+        
+        System.out.println("Enter your name: ");
+        String name = sc.nextLine();
         
         for (int i = 0 ; i < 5 ; i++) {
             if (grades[i] > highestGrade) {
@@ -62,7 +59,7 @@ public class AtienzaBonus {
         double average = sum / 5;
         
         System.out.println("===================================");
-        System.out.println("STUDENT NAME: " + name[0]);
+        System.out.println("STUDENT NAME: " + name);
         System.out.println("AVERAGE: " + average);
         System.out.println("HIGHEST GRADE: " + highestGrade + " SUBCODE: " + subcode[highestIndex]);
         System.out.println("LOWEST GRADE: " + lowestGrade + " SUBCODE: " + subcode[lowestIndex]);
