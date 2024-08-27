@@ -9,6 +9,7 @@ import java.util.Scanner;
  *
  * @author huawei
  */
+
 public class AtienzaLab {
     public static void getString(String[] str) {
         Scanner sc = new Scanner(System.in);
