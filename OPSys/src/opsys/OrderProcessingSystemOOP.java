@@ -107,6 +107,10 @@ public class OrderProcessingSystemOOP {
         System.out.print("Enter customer name: ");
         String customerName = scanner.nextLine();
         Customer c = new Customer(customerName); // Create customer object
+     
+        double payment = 0;
+        System.out.print("Enter payment amount: ");
+        payment = Double.parseDouble(scanner.nextLine());
 
         // Print Receipt
         System.out.println("\n---------------------------------------------");
@@ -135,20 +139,12 @@ public class OrderProcessingSystemOOP {
         System.out.println("---------------------------------------------");
         System.out.printf("%-20s %18.2f%n", "Sub Total:", totalCost);
 
-        double payment = 0;
         boolean validPayment = false;
         while (!validPayment) {
-            try {
-                System.out.print("\nEnter payment amount: ");
-                payment = Double.parseDouble(scanner.nextLine());
-
-                if (payment < totalCost) {
+            if (payment < totalCost) {
                     System.out.println("Insufficient payment. Please enter a sufficient amount.");
-                } else {
-                    validPayment = true;
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a valid amount.");
+            } else {
+                validPayment = true;
             }
         }
 
