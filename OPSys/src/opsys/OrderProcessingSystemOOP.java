@@ -109,8 +109,22 @@ public class OrderProcessingSystemOOP {
         Customer c = new Customer(customerName); // Create customer object
      
         double payment = 0;
-        System.out.print("Enter payment amount: ");
-        payment = Double.parseDouble(scanner.nextLine());
+        
+        boolean validPayment = false;
+        while (!validPayment) {
+            try {
+                System.out.print("Enter payment amount: ");
+                payment = Double.parseDouble(scanner.nextLine());
+        
+                if (payment < totalCost) {
+                    System.out.println("Insufficient payment. Please enter a sufficient amount.");
+                } else {
+                validPayment = true;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid amount.");
+            }
+        }
 
         // Print Receipt
         System.out.println("\n---------------------------------------------");
@@ -138,15 +152,6 @@ public class OrderProcessingSystemOOP {
         // Subtotal, Cash, and Balance Section
         System.out.println("---------------------------------------------");
         System.out.printf("%-20s %18.2f%n", "Sub Total:", totalCost);
-
-        boolean validPayment = false;
-        while (!validPayment) {
-            if (payment < totalCost) {
-                    System.out.println("Insufficient payment. Please enter a sufficient amount.");
-            } else {
-                validPayment = true;
-            }
-        }
 
         double change = payment - totalCost;
 
